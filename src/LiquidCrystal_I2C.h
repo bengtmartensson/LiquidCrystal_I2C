@@ -1,6 +1,4 @@
-//YWROBOT
-#ifndef LiquidCrystal_I2C_h
-#define LiquidCrystal_I2C_h
+#pragma once
 
 #include <inttypes.h>
 #include "Print.h" 
@@ -127,5 +125,3 @@ private:
   uint8_t _rows;
   uint8_t _backlightval;
 };
-
-#endif

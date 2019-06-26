@@ -64,12 +64,12 @@ public:
     void cursor();
     void scrollDisplayLeft();
     void scrollDisplayRight();
-    void printLeft();
-    void printRight();
+    //void printLeft();
+    //void printRight();
     void leftToRight();
     void rightToLeft();
-    void shiftIncrement();
-    void shiftDecrement();
+    //void shiftIncrement();
+    //void shiftDecrement();
     void noBacklight();
     void backlight();
     void autoscroll();

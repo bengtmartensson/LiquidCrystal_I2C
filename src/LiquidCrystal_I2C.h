@@ -52,7 +52,7 @@ class LiquidCrystal_I2C : public Print {
 public:
     LiquidCrystal_I2C(uint8_t lcd_Addr, uint8_t lcd_cols, uint8_t lcd_rows);
 private:
-    void begin(uint8_t cols, uint8_t rows, uint8_t charsize = LCD_5x8DOTS);
+    void begin(uint8_t rows, uint8_t charsize = LCD_5x8DOTS);
 public:
     void clear();
     void home();

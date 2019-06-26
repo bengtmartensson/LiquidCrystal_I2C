@@ -41,10 +41,10 @@ void LiquidCrystal_I2C::init() {
 void LiquidCrystal_I2C::init_priv() {
     Wire.begin();
     _displayfunction = LCD_4BITMODE | LCD_1LINE | LCD_5x8DOTS;
-    begin(_cols, _rows);
+    begin(_rows);
 }
 
-void LiquidCrystal_I2C::begin(uint8_t cols, uint8_t lines, uint8_t dotsize) {
+void LiquidCrystal_I2C::begin(uint8_t lines, uint8_t dotsize) {
     if (lines > 1) {
         _displayfunction |= LCD_2LINE;
     }

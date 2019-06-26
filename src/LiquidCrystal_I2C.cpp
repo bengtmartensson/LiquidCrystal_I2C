@@ -3,15 +3,6 @@
 #include "LiquidCrystal_I2C.h"
 #include "Arduino.h"
 
-#define printIIC(args) Wire.write(args)
-
-inline size_t LiquidCrystal_I2C::write(uint8_t value) {
-    send(value, Rs);
-    return 1;
-}
-
-
-
 // When the display powers up, it is configured as follows:
 //
 // 1. Display clear
@@ -249,6 +240,11 @@ inline void LiquidCrystal_I2C::command(uint8_t value) {
 
 /************ low level data pushing commands **********/
 
+size_t LiquidCrystal_I2C::write(uint8_t value) {
+    send(value, Rs);
+    return 1;
+}
+
 // write either command or data
 
 void LiquidCrystal_I2C::send(uint8_t value, uint8_t mode) {
@@ -265,7 +261,7 @@ void LiquidCrystal_I2C::write4bits(uint8_t value) {
 
 void LiquidCrystal_I2C::expanderWrite(uint8_t _data) {
     Wire.beginTransmission(_Addr);
-    printIIC((int) (_data) | _backlightval);
+    Wire.write((int) (_data) | _backlightval);
     Wire.endTransmission();
 }
 

@@ -79,11 +79,7 @@ public:
   // Example: 	const char bell[8] PROGMEM = {B00100,B01110,B01110,B01110,B11111,B00000,B00100,B00000};
   
   void setCursor(uint8_t, uint8_t); 
-#if defined(ARDUINO) && ARDUINO >= 100
   virtual size_t write(uint8_t);
-#else
-  virtual void write(uint8_t);
-#endif
   void command(uint8_t);
   void init();
   void oled_init();

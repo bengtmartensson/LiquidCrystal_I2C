@@ -1,7 +1,6 @@
 // Based on the work by DFRobot
 
 #include "LiquidCrystal_I2C.h"
-#include <inttypes.h>
 #include "Arduino.h"
 
 #define printIIC(args)	Wire.write(args)
@@ -9,7 +8,6 @@ inline size_t LiquidCrystal_I2C::write(uint8_t value) {
 	send(value, Rs);
 	return 1;
 }
-#include "Wire.h"
 
 
 

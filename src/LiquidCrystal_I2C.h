@@ -1,7 +1,5 @@
 #pragma once
 
-#include <inttypes.h>
-#include "Print.h" 
 #include <Wire.h>
 
 class LiquidCrystal_I2C : public Print {

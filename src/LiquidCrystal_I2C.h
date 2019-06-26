@@ -51,9 +51,6 @@ class LiquidCrystal_I2C : public Print {
 
 public:
     LiquidCrystal_I2C(uint8_t lcd_Addr, uint8_t lcd_cols, uint8_t lcd_rows);
-private:
-    void begin(uint8_t rows, uint8_t charsize = LCD_5x8DOTS);
-public:
     void clear();
     void home();
     void noDisplay();
@@ -78,10 +75,7 @@ public:
     void createChar(uint8_t location, const char *charmap);
     // Example: 	const char bell[8] PROGMEM = {B00100,B01110,B01110,B01110,B11111,B00000,B00100,B00000};
     void setCursor(uint8_t, uint8_t);
-private:
     virtual size_t write(uint8_t);
-    void command(uint8_t);
-public:
     void init();
     void oled_init();
 
@@ -107,6 +101,8 @@ public:
 
 
 private:
+    void begin(uint8_t rows, uint8_t charsize = LCD_5x8DOTS);
+    void command(uint8_t);
     void init_priv();
     void send(uint8_t, uint8_t);
     void write4bits(uint8_t);

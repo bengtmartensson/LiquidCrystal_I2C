@@ -2,4 +2,6 @@
 
 LiquidCrystal Arduino library for I2C LCD displays
 
-This repo is being transfered to GitLab at https://gitlab.com/tandembyte/liquidcrystal_i2c
+This repo is forked from johnrickman. Code cleaned up, and made more object oriented.
+
+LICENSE restored to the original one of LiquidCrystal, LGPL 2.1.
